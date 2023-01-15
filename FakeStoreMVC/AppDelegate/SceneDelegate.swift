@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         
-        let vc1 = UIViewController()
+        let vc1 = HomeVC()
         vc1.view.backgroundColor = .systemTeal
         vc1.tabBarItem.image = UIImage(systemName: "house")
         
