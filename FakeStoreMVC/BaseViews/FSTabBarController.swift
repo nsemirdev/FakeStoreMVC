@@ -54,9 +54,9 @@ final class FSTabBarController: UITabBarController {
         propertyAnimator.startAnimation()
     }
     
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        super.tabBar(tabBar, didSelect: item)
-        simpleAnimation(item)
-    }
+//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+//        super.tabBar(tabBar, didSelect: item)
+//        simpleAnimation(item)
+//    }
 }
 

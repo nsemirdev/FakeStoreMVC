@@ -22,6 +22,8 @@ final class HomeVC: UIViewController {
             }
         }
     }
+    
+    var basketItems = [Product]()
 
     // MARK: - UI Elements
     
@@ -100,11 +102,32 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.cellId , for: indexPath) as! ProductCell
-        cell.imageView.sd_setImage(with: URL(string: products[indexPath.item].image))
-        cell.priceLabel.text = "$\(products[indexPath.item].price)  "
-        cell.productNameLabel.text = products[indexPath.item].title
+        cell.buttonState = false
+        basketItems.forEach { product in
+            if product.id == products[indexPath.item].id {
+                cell.buttonState = true
+            }
+        }
+        cell.delegate = self
+        cell.product = products[indexPath.item]
+        
         return cell
+    }
+    
+    func didTapButton(on state: Bool, product: Product) {
+        
+        if state {
+            basketItems.append(product)
+        } else {
+            var indexToRemove: Int = 0
+            
+            for idx in 0..<basketItems.count where basketItems[idx].id == product.id {
+                indexToRemove = idx
+            }
+            basketItems.remove(at: indexToRemove)
+        }
     }
 }
 
 extension HomeVC: UISearchBarDelegate {}
+extension HomeVC: ProductCellDelegate {}

@@ -8,8 +8,31 @@
 import UIKit
 import SnapKit
 
+protocol ProductCellDelegate: AnyObject {
+    func didTapButton(on state: Bool, product: Product)
+}
+
 final class ProductCell: UICollectionViewCell {
+
     static let cellId = "ProductCell"
+
+    var product: Product? {
+        didSet {
+            DispatchQueue.main.async {
+                self.imageView.sd_setImage(with: URL(string: self.product!.image))
+                self.priceLabel.text = "$\(self.product!.price)  "
+                self.productNameLabel.text = self.product!.title
+            }
+        }
+    }
+    
+    weak var delegate: ProductCellDelegate?
+    
+    var buttonState = false {
+        didSet {
+            buttonState ? changeStateToAdded() : changeStateToAdd()
+        }
+    }
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -54,6 +77,10 @@ final class ProductCell: UICollectionViewCell {
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = UIColor(named: "PrimaryColor")
         button.layer.cornerRadius = 4
+        button.addTarget(nil, action: #selector(handleViewState), for: .touchUpInside)
+        button.snp.makeConstraints { make in
+            make.height.equalTo(40)
+        }
         return button
     }()
     
@@ -90,8 +117,32 @@ final class ProductCell: UICollectionViewCell {
         }
     }
     
+    fileprivate func changeStateToAdd() {
+        addToCardButton.setTitle("Add to Basket", for: .normal)
+        addToCardButton.setTitleColor(.white, for: .normal)
+        addToCardButton.backgroundColor = UIColor(named: "PrimaryColor")
+        addToCardButton.setImage(nil, for: .normal)
+    }
+    
+    fileprivate func changeStateToAdded() {
+        addToCardButton.backgroundColor = UIColor(named: "SecondaryColor")
+        addToCardButton.setTitle("Added", for: .normal)
+        addToCardButton.setTitleColor(UIColor(named: "PrimaryColor"), for: .normal)
+        addToCardButton.setImage(UIImage(systemName: "checkmark")!.withTintColor(UIColor(named: "PrimaryColor")!, renderingMode: .alwaysOriginal), for: .normal)
+    }
+    
+    @objc func handleViewState() {
+        if buttonState {
+            changeStateToAdd()
+        } else {
+            changeStateToAdded()
+        }
+        buttonState = !buttonState
+        
+        delegate?.didTapButton(on: buttonState, product: product!)
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
