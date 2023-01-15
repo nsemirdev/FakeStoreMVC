@@ -16,9 +16,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemTeal
-        window?.rootViewController = vc
+        let vc1 = UIViewController()
+        vc1.view.backgroundColor = .systemTeal
+        vc1.tabBarItem.image = UIImage(systemName: "house")
+        
+        let vc2 = UIViewController()
+        vc2.view.backgroundColor = .systemRed
+        vc2.tabBarItem.image = UIImage(systemName: "cart")
+        
+        let vc3 = UIViewController()
+        vc3.view.backgroundColor = .systemBlue
+        vc3.tabBarItem.image = UIImage(systemName: "person")
+        
+        let tabBar = FSTabBarController()
+        tabBar.viewControllers = [
+            vc1, vc2, vc3
+        ]
+        
+        window?.rootViewController = tabBar
     }
 
 }

@@ -11,6 +11,7 @@
 		2D4D2BB829740CA1002D1A8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BB729740CA1002D1A8E /* SceneDelegate.swift */; };
 		2D4D2BBF29740CA3002D1A8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4D2BBE29740CA3002D1A8E /* Assets.xcassets */; };
 		2D4D2BC229740CA3002D1A8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D4D2BC029740CA3002D1A8E /* LaunchScreen.storyboard */; };
+		2D4D2BCD29741091002D1A8E /* FSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BCC29741091002D1A8E /* FSTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		2D4D2BBE29740CA3002D1A8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D4D2BC129740CA3002D1A8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D4D2BC329740CA3002D1A8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D4D2BCC29741091002D1A8E /* FSTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +54,10 @@
 		2D4D2BB429740CA1002D1A8E /* FakeStoreMVC */ = {
 			isa = PBXGroup;
 			children = (
-				2D4D2BCB29740CEF002D1A8E /* Scenes */,
+				2D4D2BCE29741462002D1A8E /* BaseViews */,
 				2D4D2BCA29740CE1002D1A8E /* AppDelegate */,
 				2D4D2BC929740CD7002D1A8E /* Resources */,
+				2D4D2BCB29740CEF002D1A8E /* Scenes */,
 			);
 			path = FakeStoreMVC;
 			sourceTree = "<group>";
@@ -83,6 +86,14 @@
 			children = (
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2D4D2BCE29741462002D1A8E /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				2D4D2BCC29741091002D1A8E /* FSTabBarController.swift */,
+			);
+			path = BaseViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D4D2BB629740CA1002D1A8E /* AppDelegate.swift in Sources */,
+				2D4D2BCD29741091002D1A8E /* FSTabBarController.swift in Sources */,
 				2D4D2BB829740CA1002D1A8E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
