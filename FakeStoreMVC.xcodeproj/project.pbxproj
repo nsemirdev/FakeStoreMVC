@@ -19,6 +19,7 @@
 		2D4D2BDE29743A41002D1A8E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BDD29743A40002D1A8E /* ProductCell.swift */; };
 		2D4D2BE129743DBB002D1A8E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4D2BE029743DBB002D1A8E /* SDWebImage */; };
 		2D4D2BE42974564F002D1A8E /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BE32974564F002D1A8E /* CartVC.swift */; };
+		2D4D2BE629747DD5002D1A8E /* CartTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BE529747DD5002D1A8E /* CartTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2D4D2BD72974179F002D1A8E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2D4D2BDD29743A40002D1A8E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		2D4D2BE32974564F002D1A8E /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		2D4D2BE529747DD5002D1A8E /* CartTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				2D4D2BDD29743A40002D1A8E /* ProductCell.swift */,
+				2D4D2BE529747DD5002D1A8E /* CartTableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				2D4D2BB629740CA1002D1A8E /* AppDelegate.swift in Sources */,
 				2D4D2BD029741512002D1A8E /* HomeVC.swift in Sources */,
+				2D4D2BE629747DD5002D1A8E /* CartTableCell.swift in Sources */,
 				2D4D2BE42974564F002D1A8E /* CartVC.swift in Sources */,
 				2D4D2BCD29741091002D1A8E /* FSTabBarController.swift in Sources */,
 				2D4D2BD529741578002D1A8E /* APICaller.swift in Sources */,
