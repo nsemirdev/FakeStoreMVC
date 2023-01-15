@@ -19,9 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let vc1 = HomeVC()
         vc1.tabBarItem.image = UIImage(systemName: "house")
         
-        let vc2 = UIViewController()
-        vc2.view.backgroundColor = .systemRed
+        let vc2 = CartVC()
         vc2.tabBarItem.image = UIImage(systemName: "cart")
+        vc2.tabBarItem.badgeValue = "\(0)"
+        vc2.tabBarItem.badgeColor = UIColor.blue
         
         let vc3 = UIViewController()
         vc3.view.backgroundColor = .systemBlue

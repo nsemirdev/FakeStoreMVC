@@ -18,6 +18,7 @@
 		2D4D2BDB29741942002D1A8E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4D2BDA29741942002D1A8E /* SnapKit */; };
 		2D4D2BDE29743A41002D1A8E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BDD29743A40002D1A8E /* ProductCell.swift */; };
 		2D4D2BE129743DBB002D1A8E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4D2BE029743DBB002D1A8E /* SDWebImage */; };
+		2D4D2BE42974564F002D1A8E /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BE32974564F002D1A8E /* CartVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		2D4D2BD429741578002D1A8E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		2D4D2BD72974179F002D1A8E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2D4D2BDD29743A40002D1A8E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		2D4D2BE32974564F002D1A8E /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		2D4D2BCB29740CEF002D1A8E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2D4D2BE229745642002D1A8E /* Cart */,
 				2D4D2BD129741525002D1A8E /* Home */,
 			);
 			path = Scenes;
@@ -150,6 +153,14 @@
 				2D4D2BDD29743A40002D1A8E /* ProductCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2D4D2BE229745642002D1A8E /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				2D4D2BE32974564F002D1A8E /* CartVC.swift */,
+			);
+			path = Cart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			files = (
 				2D4D2BB629740CA1002D1A8E /* AppDelegate.swift in Sources */,
 				2D4D2BD029741512002D1A8E /* HomeVC.swift in Sources */,
+				2D4D2BE42974564F002D1A8E /* CartVC.swift in Sources */,
 				2D4D2BCD29741091002D1A8E /* FSTabBarController.swift in Sources */,
 				2D4D2BD529741578002D1A8E /* APICaller.swift in Sources */,
 				2D4D2BB829740CA1002D1A8E /* SceneDelegate.swift in Sources */,

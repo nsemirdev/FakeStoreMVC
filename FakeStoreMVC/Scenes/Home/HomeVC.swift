@@ -115,9 +115,11 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func didTapButton(on state: Bool, product: Product) {
-        
+        let count = Int(tabBarController?.tabBar.items?[1].badgeValue ?? "0")!
+
         if state {
             basketItems.append(product)
+            tabBarController?.tabBar.items?[1].badgeValue = "\(count + 1)"
         } else {
             var indexToRemove: Int = 0
             
@@ -125,7 +127,9 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
                 indexToRemove = idx
             }
             basketItems.remove(at: indexToRemove)
+            tabBarController?.tabBar.items?[1].badgeValue = "\(count - 1)"
         }
+        
     }
 }
 
