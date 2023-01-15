@@ -15,6 +15,9 @@
 		2D4D2BD029741512002D1A8E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BCF29741512002D1A8E /* HomeVC.swift */; };
 		2D4D2BD529741578002D1A8E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BD429741578002D1A8E /* APICaller.swift */; };
 		2D4D2BD82974179F002D1A8E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BD72974179F002D1A8E /* Product.swift */; };
+		2D4D2BDB29741942002D1A8E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4D2BDA29741942002D1A8E /* SnapKit */; };
+		2D4D2BDE29743A41002D1A8E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D2BDD29743A40002D1A8E /* ProductCell.swift */; };
+		2D4D2BE129743DBB002D1A8E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4D2BE029743DBB002D1A8E /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,7 @@
 		2D4D2BCF29741512002D1A8E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2D4D2BD429741578002D1A8E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		2D4D2BD72974179F002D1A8E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2D4D2BDD29743A40002D1A8E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4D2BE129743DBB002D1A8E /* SDWebImage in Frameworks */,
+				2D4D2BDB29741942002D1A8E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 		2D4D2BB429740CA1002D1A8E /* FakeStoreMVC */ = {
 			isa = PBXGroup;
 			children = (
+				2D4D2BDC29743A31002D1A8E /* Cells */,
 				2D4D2BD629741798002D1A8E /* Models */,
 				2D4D2BD229741568002D1A8E /* Services */,
 				2D4D2BCE29741462002D1A8E /* BaseViews */,
@@ -137,6 +144,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2D4D2BDC29743A31002D1A8E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2D4D2BDD29743A40002D1A8E /* ProductCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +168,10 @@
 			dependencies = (
 			);
 			name = FakeStoreMVC;
+			packageProductDependencies = (
+				2D4D2BDA29741942002D1A8E /* SnapKit */,
+				2D4D2BE029743DBB002D1A8E /* SDWebImage */,
+			);
 			productName = FakeStoreMVC;
 			productReference = 2D4D2BB229740CA1002D1A8E /* FakeStoreMVC.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +200,10 @@
 				Base,
 			);
 			mainGroup = 2D4D2BA929740CA1002D1A8E;
+			packageReferences = (
+				2D4D2BD929741942002D1A8E /* XCRemoteSwiftPackageReference "SnapKit" */,
+				2D4D2BDF29743DBB002D1A8E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 2D4D2BB329740CA1002D1A8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -212,6 +235,7 @@
 				2D4D2BCD29741091002D1A8E /* FSTabBarController.swift in Sources */,
 				2D4D2BD529741578002D1A8E /* APICaller.swift in Sources */,
 				2D4D2BB829740CA1002D1A8E /* SceneDelegate.swift in Sources */,
+				2D4D2BDE29743A41002D1A8E /* ProductCell.swift in Sources */,
 				2D4D2BD82974179F002D1A8E /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,6 +450,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D4D2BD929741942002D1A8E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2D4D2BDF29743DBB002D1A8E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D4D2BDA29741942002D1A8E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D4D2BD929741942002D1A8E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		2D4D2BE029743DBB002D1A8E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D4D2BDF29743DBB002D1A8E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D4D2BAA29740CA1002D1A8E /* Project object */;
 }

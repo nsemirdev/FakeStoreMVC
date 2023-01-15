@@ -8,6 +8,7 @@
 import UIKit
 
 final class FSTabBarController: UITabBarController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -20,12 +21,17 @@ final class FSTabBarController: UITabBarController {
     
     fileprivate func configure() {
         tabBar.layer.masksToBounds = true
-        tabBar.isTranslucent = true
+        tabBar.isOpaque = true
         tabBar.layer.cornerRadius = 30
         tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         tabBar.unselectedItemTintColor = .white
         tabBar.tintColor = UIColor(named: "SecondaryColor")
-        tabBar.backgroundColor = UIColor(named: "PrimaryColor")
+    
+        let appearance = UITabBarAppearance()
+        appearance.backgroundColor = UIColor(named: "PrimaryColor")
+    
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
     }
     
     fileprivate func layout() {
@@ -49,6 +55,7 @@ final class FSTabBarController: UITabBarController {
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        super.tabBar(tabBar, didSelect: item)
         simpleAnimation(item)
     }
 }
